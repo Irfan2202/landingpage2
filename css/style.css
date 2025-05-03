@@ -1,0 +1,29 @@
+.navbar,
+.hero {
+  background-color: #7d5fff;
+}
+.hero {
+  margin-top: 56px;
+}
+.hero h1,
+.funfacts h1 {
+  font-weight: 700;
+}
+.hero img,
+.funfacts img {
+  max-width: 60%;
+}
+h1 span {
+  color: #7d5fff;
+}
+
+.features .card {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2), -5px 0px 10px rgba(0, 0, 0, 0.2),
+    0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.funfacts .card {
+  color: white;
+  padding: 20px;
+}
