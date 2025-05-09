@@ -1,29 +1,157 @@
+:root {
+  --primary-color: #7d5fff;
+  --light-bg: #fafafa;
+  --font-bold: 700;
+  --card-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2),
+    -5px 0px 10px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2);
+  --card-radius: 10px;
+}
+
+/* === Base Utilities === */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.font-bold {
+  font-weight: var(--font-bold);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card {
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-radius);
+}
+
+.card-body {
+  margin: 24px;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+/* === Navbar & Hero === */
 .navbar,
 .hero {
-  background-color: #7d5fff;
+  background-color: var(--primary-color);
 }
-.hero {
-  margin-top: 56px;
-}
+
 .hero h1,
-.funfacts h1 {
-  font-weight: 700;
+.features h1,
+.funfacts h1,
+.features .card h2,
+.funfacts h2 {
+  font-weight: var(--font-bold);
 }
-.hero img,
-.funfacts img {
+
+.hero img {
   max-width: 60%;
 }
-h1 span {
-  color: #7d5fff;
+
+/* === Features Section === */
+.features .item {
+  min-width: 10rem;
 }
 
 .features .card {
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2), -5px 0px 10px rgba(0, 0, 0, 0.2),
-    0px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+/* === Owl Carousel Navigation === */
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.owl-nav button.owl-prev:hover,
+.owl-nav button.owl-next:hover {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover i,
+.owl-carousel .owl-nav button.owl-next:hover i {
+  color: var(--primary-color);
+}
+
+/* === Funfacts Section === */
+.funfacts {
+  background-color: var(--light-bg);
+}
+
+.funfacts img {
+  max-width: 50%;
+}
+
+.funfacts h1 {
+  margin-top: 56px;
+}
+
 .funfacts .card {
   color: white;
-  padding: 20px;
+  margin-top: 24px;
+  box-shadow: none;
+}
+
+/* Dark Mode Toggle Button */
+.dark-toggle {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-toggle i {
+  color: #333;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #2e2f30;
+  color: #eee;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .hero {
+  background-color: #2e2f30;
+}
+
+body.dark-mode .card {
+  background-color: #2e2f30;
+  color: #eee;
+}
+
+body.dark-mode .funfacts {
+  background-color: #2e2f30;
+}
+
+body.dark-mode .dark-toggle {
+  background-color: #2e2f30;
+}
+
+body.dark-mode .dark-toggle i {
+  color: #f1c40f;
 }
