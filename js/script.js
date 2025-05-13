@@ -1,4 +1,4 @@
-$(".owl-carousel").owlCarousel({
+$(".features .owl-carousel").owlCarousel({
   loop: true,
   nav: true,
   navText: [
@@ -17,6 +17,29 @@ $(".owl-carousel").owlCarousel({
     },
     1000: {
       items: 3,
+    },
+  },
+});
+
+$(".screenshots .owl-carousel").owlCarousel({
+  loop: true,
+  nav: true,
+  navText: [
+    '<i class="bi bi-dash-lg fs-2"></i>',
+    '<i class="bi bi-dash-lg fs-2"></i>',
+  ],
+  dots: false,
+  loop: true,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 4,
     },
   },
 });
