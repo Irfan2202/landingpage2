@@ -39,14 +39,6 @@ h1 span {
   color: var(--primary-color);
 }
 
-.btn {
-  background-color: white;
-  color: var(--primary-color);
-}
-
-.btn:hover {
-  background-color: #2e2f30;
-}
 /* === Navbar & Hero === */
 .navbar,
 .hero {
@@ -63,7 +55,16 @@ h1 span {
 .hero img {
   max-width: 60%;
 }
-
+.hero .btn {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+  padding: 12px 24px;
+  font-size: 16px;
+}
+.hero .btn:hover {
+  background-color: black;
+  color: var(--light-bg);
+}
 /* === Features Section === */
 .features .item {
   min-width: 10rem;
@@ -112,7 +113,7 @@ h1 span {
 }
 
 .funfacts .card {
-  color: white;
+  color: var(--light-bg);
   margin-top: 24px;
   box-shadow: none;
 }
@@ -130,7 +131,9 @@ h1 span {
   background-position: center;
   z-index: 0;
 }
-
+.download h1 {
+  color: var(--light-bg);
+}
 /* Overlay menggunakan pseudo-element */
 .download::before {
   content: "";
@@ -140,7 +143,7 @@ h1 span {
   width: 100%;
   height: 100%;
   background-color: var(--primary-color);
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 1;
 }
 .download > * {
@@ -148,13 +151,19 @@ h1 span {
   z-index: 2;
 }
 
+.download i {
+  color: var(--primary-color);
+}
+
 .download .btn {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--light-bg);
+  padding: 12px 24px;
+  font-size: 16px;
 }
 .download .btn:hover {
   background-color: black;
-  color: white;
+  color: var(--light-bg);
 }
 
 /* === Dark Mode Toggle Button === */
@@ -165,7 +174,7 @@ h1 span {
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background-color: #fff;
+  background-color: var(--light-bg);
   border-radius: 50%;
   box-shadow: var(--card-shadow);
   display: flex;
@@ -183,7 +192,7 @@ h1 span {
 /* === Dark Mode Styling === */
 body.dark-mode {
   background-color: #2e2f30;
-  color: #eee;
+  color: var(--light-bg);
 }
 
 body.dark-mode .navbar,
@@ -195,13 +204,12 @@ body.dark-mode .dark-toggle {
   background-color: #2e2f30;
 }
 
-body.dark-mode .card {
-  color: #eee;
+body.dark-mode .hero .btn:hover {
+  background-color: var(--primary-color);
 }
 
-body.dark-mode .btn:hover {
-  background-color: var(--primary-color);
-  color: white;
+body.dark-mode .card {
+  color: var(--light-bg);
 }
 
 body.dark-mode .dark-toggle i {
@@ -221,11 +229,11 @@ body.dark-mode .download::before {
 }
 
 body.dark-mode .download .btn {
-  background-color: white;
+  background-color: var(--light-bg);
   color: var(--primary-color);
 }
 
 body.dark-mode .download .btn:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--light-bg);
 }
