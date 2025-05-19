@@ -20,10 +20,6 @@
   font-weight: var(--font-bold);
 }
 
-.text-center {
-  text-align: center;
-}
-
 .card {
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
@@ -37,6 +33,24 @@
 
 h1 span {
   color: var(--primary-color);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+  padding: 12px 24px;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: black;
+  color: var(--light-bg);
+}
+i {
+  color: var(--primary-color);
+}
+ul li {
+  list-style: none;
+  text-align: left;
 }
 
 /* === Navbar & Hero === */
@@ -151,21 +165,24 @@ h1 span {
   z-index: 2;
 }
 
-.download i {
+/* === Pricing Section === */
+.pricing h2 {
+  font-weight: 700;
+}
+.price {
+  font-size: 90px;
+  font-weight: 700;
   color: var(--primary-color);
 }
-
-.download .btn {
-  background-color: var(--primary-color);
-  color: var(--light-bg);
-  padding: 12px 24px;
-  font-size: 16px;
+.month {
+  margin-top: 85px;
 }
-.download .btn:hover {
-  background-color: black;
-  color: var(--light-bg);
+.currency {
+  margin-top: 30px;
 }
-
+.pricing ul li {
+  line-height: 2.5;
+}
 /* === Dark Mode Toggle Button === */
 .dark-toggle {
   position: fixed;
@@ -198,12 +215,17 @@ body.dark-mode {
 body.dark-mode .navbar,
 body.dark-mode .hero,
 body.dark-mode .funfacts,
-body.dark-mode .screenshots,
+body.dark-mode .download,
 body.dark-mode .card,
 body.dark-mode .dark-toggle {
-  background-color: #2e2f30;
+  background-color: #2e2e2e;
 }
 
+body.dark-mode .features,
+body.dark-mode .screenshots,
+body.dark-mode .pricing {
+  background-color: #1e1e1e;
+}
 body.dark-mode .hero .btn:hover {
   background-color: var(--primary-color);
 }
