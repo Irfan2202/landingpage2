@@ -52,6 +52,10 @@ ul li {
   list-style: none;
   text-align: left;
 }
+a {
+  color: var(--light-bg);
+  text-decoration: none;
+}
 
 /* === Navbar & Hero === */
 .navbar,
@@ -115,7 +119,8 @@ ul li {
 }
 
 /* === Funfacts Section === */
-.funfacts {
+.funfacts,
+.contact {
   background-color: var(--light-bg);
 }
 
@@ -184,6 +189,13 @@ ul li {
 .pricing ul li {
   line-height: 2.5;
 }
+
+/* === footer === */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-bg);
+}
+
 /* === Dark Mode Toggle Button === */
 .dark-toggle {
   position: fixed;
@@ -217,6 +229,7 @@ body.dark-mode .navbar,
 body.dark-mode .hero,
 body.dark-mode .funfacts,
 body.dark-mode .download,
+body.dark-mode .contact,
 body.dark-mode .card,
 body.dark-mode .dark-toggle {
   background-color: #2e2e2e;
@@ -224,7 +237,8 @@ body.dark-mode .dark-toggle {
 
 body.dark-mode .features,
 body.dark-mode .screenshots,
-body.dark-mode .pricing {
+body.dark-mode .pricing,
+body.dark-mode .footer {
   background-color: #1e1e1e;
 }
 body.dark-mode .hero .btn:hover {
