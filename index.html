@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Bootstrap Icon -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
   </head>
   <body>
-      <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
       <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -42,19 +45,16 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Screenshot</a>
+              <a class="nav-link" href="#screenshot">Screenshot</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Testimonial</a>
+              <a class="nav-link" href="#pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -91,7 +91,7 @@
     </section>
 
     <!-- Features  -->
-    <section class="features py-5">
+    <section class="features py-5" id="features">
       <div class="container">
         <h1 class="justify-content-center text-center gy-5 mt-2">
           Awesome <span>Features</span>
@@ -213,7 +213,7 @@
     </section>
 
     <!--Screenshots  -->
-    <section class="screenshots py-5">
+    <section class="screenshots py-5" id="screenshot">
       <div class="container">
         <h1 class="justify-content-center text-center gy-5 mt-2">
           App <span>Screenshots</span>
@@ -297,9 +297,10 @@
     <!-- Pricing Plan -->
     <section
       class="pricing justify-content-center align-items-center text-center py-5"
+      id="pricing"
     >
       <div class="container">
-        <h1 class="gy-5 mb-3">Pricing <span>Plan</span></h1>
+        <h1 class="gy-5 mb-4">Pricing <span>Plan</span></h1>
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card">
@@ -331,7 +332,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-body">
-                <h2>Basic</h2>
+                <h2>Premium</h2>
                 <div class="d-flex justify-content-center text-center">
                   <div class="currency">$</div>
                   <div class="price">149</div>
@@ -356,7 +357,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card">
               <div class="card-body">
-                <h2>Basic</h2>
+                <h2>Ultimate</h2>
                 <div
                   class="card-text d-flex justify-content-center text-center"
                 >
@@ -383,6 +384,137 @@
         </div>
       </div>
     </section>
+
+    <!-- contact -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <h1 class="justify-content-center text-center gy-5 mb-5">
+          Get In <span>Touch</span>
+        </h1>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <h3 class="mb-4">For Any Queries And Support</h3>
+            <ul>
+              <li class="mb-3 d-flex align-items-start">
+                <i class="bi bi-geo-alt-fill me-2 fs-4"></i>
+                <div>
+                  <strong>Company Location</strong>
+                  <p class="mb-0">Bandung, Jawa Barat</p>
+                </div>
+              </li>
+              <li class="mb-3 d-flex align-items-start">
+                <i class="bi bi-envelope-fill me-2 fs-4"></i>
+                <div>
+                  <strong>Write To Us At</strong>
+                  <p class="mb-0">info@gmail.com</p>
+                </div>
+              </li>
+              <li class="mb-3 d-flex align-items-start">
+                <i class="bi bi-telephone-fill me-2 fs-4"></i>
+                <div>
+                  <strong>Call Us On</strong>
+                  <p class="mb-0">082123456789</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <form>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control rounded-pill"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control rounded-pill"
+                    placeholder="Your Email"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-pill"
+                  id="phone"
+                  placeholder="Your Phone"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-pill"
+                  id="subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="3"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn rounded-pill">
+                Send Messages
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 col-sm-12">
+            <h2>About Us</h2>
+            <p>
+              Lorem ipsumdolor sit amet consectetur adipisicing elit. Possimus
+              amet deserunt, dolore consequuntur earum iste. Earum accusantium
+              cumque aliquam ut.
+            </p>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-sm-12">
+            <h2>Company</h2>
+            <ul>
+              <li>Privacy Policy</li>
+              <li>Term & Condition</li>
+              <li>Lates Blogs</li>
+              <li>App Services</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-sm-12">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#screenshot">Screenshot</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-sm-12">
+            <h2>Social Pages</h2>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Linkedin</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- Dark Mode Toggle -->
     <div id="darkModeToggle" class="dark-toggle">
       <i class="bi bi-moon-fill" id="toggleIcon"></i>
